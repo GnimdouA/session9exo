@@ -1,0 +1,46 @@
+---
+title: "Session9exo"
+author: "KABASSINA Gnimdou Ange"
+date: '2022-03-28'
+output: html_document
+---
+Exercice 3.1
+
+```{r plot sinus, include=TRUE,warning=FALSE}
+# 1. Représentation de la fonction sinus entre 0 et 2pi
+x <- seq(0,2*pi, by=0.01)
+y <- sin(x)
+plot(x,y,type="l") 
+
+# 2. ajouter le titre : Graphe de la fonction sinus
+plot(x,y,type="l", main="Graphe de la fonction sinus")
+```
+
+Exercice 3.2
+```{r comparaison de distributions, include=TRUE, warning=FALSE}
+# 1.Représentation de la loi normale entre -4 et 4
+x <-  x <- seq(-4, 4, length=100)
+y <- dnorm(x)
+plot(x,y, type = "l")
+
+# 2.Représentation des loi de students à 5 et 30 dégré de liberté
+y.5 <- function(x){ 
+  dt(x, df = 5)}
+y.30 <- function(x){ 
+  dt(x, df = 30)}
+curve(y.5, col = "red")
+curve(y.30, col = "blue", lty=2, add = TRUE)
+
+# 3. Inserer une légende 
+legend(1, 95, legend=c("Deg.lib 5", "Deg.lib 30"),
+       col=c("red", "blue"), lty=1:2)
+```
+
+Exercice 3.3
+```{r tracé de point, include=TRUE,warning=FALSE}
+# tracé de max O3 en fonction de T12
+
+
+
+```
+
